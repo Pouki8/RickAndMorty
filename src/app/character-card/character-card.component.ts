@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { CharacterService } from '../service/character.service';
+import { Characters } from '../model/characters';
 
 @Component({
   selector: 'app-character-card',
@@ -7,8 +8,8 @@ import { CharacterService } from '../service/character.service';
   styleUrls: ['./character-card.component.css']
 })
 export class CharacterCardComponent implements OnInit {
+  @Input() character!: Characters;
   characters: any[] = [];
-  character: any;
   lastDrawTime!: number;
 
   constructor(private characterService: CharacterService) { }
