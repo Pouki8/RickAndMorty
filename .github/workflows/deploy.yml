@@ -22,7 +22,7 @@ jobs:
       # Étape 2 : Configurer Node.js
       - uses: actions/setup-node@v4
         with:
-          node-version: 18 # Utilise la version 20 de Node.js
+          node-version: 20 # Utilise la version 20 de Node.js
           cache: npm # Active la mise en cache de npm pour accélérer les installations futures
 
       # Étape 3 : Installer les dépendances du projet
@@ -35,7 +35,7 @@ jobs:
 
       # Étape 5 : Déployer sur GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           # Utilise le token GitHub pour authentifier l'action
           github_token: ${{ secrets.GITHUB_TOKEN }}
