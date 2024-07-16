@@ -1,0 +1,4 @@
+<p>Temps restant : {{heures}} : {{minutes}} : {{secondes}}</p>
+<button (click)="getCard()" [disabled]="!showButton">Tirez une carte</button>
+
+<app-character-card *ngIf="character" [characters]="character"></app-character-card>

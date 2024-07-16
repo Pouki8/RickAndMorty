@@ -8,19 +8,13 @@ import { Characters } from '../model/characters';
 })
 export class CharacterService {
 
+  private url = 'https://rickandmortyapi.com/api';
 
   constructor(private http: HttpClient) { }
 
-  urlApi = 'https://rickandmortyapi.com/api/character';
-
-
-  getAllCharacters(): Observable<any> {
-    return this.http.get(this.urlApi);
-  }
-
   getRandomCharacter(): Observable<Characters> {
     const characterId = Math.floor(Math.random() * 826) + 1;
-    return this.http.get<Characters>(`${this.urlApi}/character/${characterId}`);
+    return this.http.get<Characters>(`${this.url}/character/${characterId}`);
   }
 
 

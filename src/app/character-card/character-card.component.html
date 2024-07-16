@@ -1,11 +1,6 @@
 <h1>Rick And Morty</h1>
-<div *ngIf="character">
-    <h1>{{ character.id }}</h1>
-    <h2>{{ character.name }}</h2>
-    <img [src]="character.image" alt="{{ character.name }}">
-</div>
-<button (click)="drawCharacter()" [disabled]="!canDraw()">Draw a Character</button>
-<div *ngFor="let character of characters">
-    <p>{{ character.name }}</p>
-    <img [src]="character.image" alt="{{ character.name }}">
+<div *ngIf="characters" class="card">
+    <h1>{{ characters.id }}</h1>
+    <h2>{{ characters.name }}</h2>
+    <img [src]="characters.image" alt="{{ characters.name }}">
 </div>

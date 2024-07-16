@@ -5,11 +5,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CharacterCardComponent } from './character-card/character-card.component';
+import { DecompteComponent } from './decompte/decompte.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CharacterCardComponent
+    CharacterCardComponent,
+    DecompteComponent
   ],
   imports: [
     BrowserModule,
