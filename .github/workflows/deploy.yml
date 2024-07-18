@@ -40,7 +40,7 @@ jobs:
           # Utilise le token GitHub pour authentifier l'action
           github_token: ${{ secrets.GITHUB_TOKEN }}
           # Répertoire à publier sur la branche gh-pages
-          publish_dir: ./dist
+          publish_dir: ./dist/rick-and-morty
           # Définir l'auteur du commit comme le bot GitHub Actions
           user_name: github-actions[bot]
           user_email: 41898282+github-actions[bot]@users.noreply.github.com
